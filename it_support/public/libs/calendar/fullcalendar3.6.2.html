@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Fullcalendar 1</title>
+    <link rel="stylesheet" href="fullcalendar-3.6.2/fullcalendar.min.css">
+    <style type="text/css">
+    html,body{
+        margin:0;
+        padding:0;
+        font-family:tahoma, "Microsoft Sans Serif", sans-serif, Verdana;
+        font-size:12px;
+    }
+	#calendar{
+		max-width: 700px;
+		margin: 0 auto;
+        font-size:13px;
+	}
+    </style>
+</head>
+<body>
+
+<br><br>
+<div style="margin:auto;width:800px;">
+ <div id='calendar'></div>
+ </div>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="fullcalendar-3.6.2/lib/moment.min.js"></script>
+<!-- <script type="text/javascript" src="fullcalendar-3.6.2/fullcalendar.min.js"></script> -->
+<script type="text/javascript" src="fullcalendar-3.6.2/fullcalendar.js"></script>
+<script type="text/javascript" src="fullcalendar-3.6.2/locale/th.js"></script>
+<!-- <script type="text/javascript" src="script-3.6.2.js"></script> -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function(){
+
+            $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',  //  prevYear nextYea
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay',
+                    // right: 'month',
+                },
+                buttonIcons:{
+                    prev: 'left-single-arrow',
+                    next: 'right-single-arrow',
+                    prevYear: 'left-double-arrow',
+                    nextYear: 'right-double-arrow'
+                },
+        //        theme:false,
+        //        themeButtonIcons:{
+        //            prev: 'circle-triangle-w',
+        //            next: 'circle-triangle-e',
+        //            prevYear: 'seek-prev',
+        //            nextYear: 'seek-next'
+        //        },
+        //        firstDay:1,
+        //        isRTL:false,
+        //        weekends:true,
+        //        weekNumbers:false,
+        //        weekNumberCalculation:'local',
+        //        height:'auto',
+        //        fixedWeekCount:false,
+                events: {
+                    url: 'data_events-3.6.2.php?gData=1',
+                    error: function() {
+
+                    }
+                },
+                eventLimit:true,
+               // hiddenDays: [ 2, 4 ],
+                lang: 'th',
+                dayClick: function() {
+                   // alert('a day has been clicked!');
+                   var view = $('#calendar').fullCalendar('getView');
+                   alert("The view's title is " + view.title);
+                }
+            });
+
+
+        });
+        // $('#calendar').on('click','.fc-content',function(){
+        //     let test = $(this).find('.fc-title').html();
+        //     alert(test);
+        // });
+        // $('#calenda').on('click','.fc-day',function(){
+        //     alert(2);
+        // });
+
+    });
+</script>
+</body>
+</html>

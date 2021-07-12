@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /it_support/
+
+rewriteCond %{REQUEST_FILENAME} !-d
+rewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+php_value upload_max_filesize 128M
+php_value post_max_size 128M

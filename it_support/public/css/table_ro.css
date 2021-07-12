@@ -1,0 +1,20 @@
+.bg-ro{
+    background-color: #b6b6be;
+}
+.border-ro{
+    border-color: #717177 !important;
+}
+.text-ro{
+    color: #717177;
+}
+.max-content{
+    width: max-content !important;
+}
+.border-ro-input{
+    height: fit-content;
+    padding-left: 10px;
+    border-bottom: 1px dotted #717177;
+}
+.modal-preview-ro .form-check .form-check-input:checked+.form-check-sign .check{
+        background: #000000;
+}

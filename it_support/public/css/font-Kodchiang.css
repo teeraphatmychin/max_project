@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "KodchiangUPC";
+    src: url("/it_support/public/font/KodchiangUPC/kodchiangregular.eot"); /* IE9 Compat Modes */
+    src: url("/it_support/public/font/KodchiangUPC/kodchiangregular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/it_support/public/font/KodchiangUPC/kodchiangregular.otf") format("opentype"), /* Open Type Font */
+    url("/it_support/public/font/KodchiangUPC/kodchiangregular.svg") format("svg"), /* Legacy iOS */
+    url("/it_support/public/font/KodchiangUPC/kodchiangregular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/it_support/public/font/KodchiangUPC/kodchiangregular.woff") format("woff"), /* Modern Browsers */
+    url("/it_support/public/font/KodchiangUPC/kodchiangregular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+    /* src: local('Kanit'), local('Kanit-Regular'), url(/mvc/public/font/Kanit/RPQGAQk3DD66RypwKRnBKQ.woff2) format('woff2'); */
+}
